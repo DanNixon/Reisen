@@ -46,3 +46,9 @@ camera_cutout_height = 53;
 // centre of the device panel
 camera_cutout_offset_x = -45;
 camera_cutout_offset_y = 0;
+
+// Size and position of cutout section for glasses clearance
+glasses_cutout_offset_x = -5;
+glasses_cutout_offset_y = 5;
+glasses_cutout_width = 35;
+glasses_cutout_height = 40;
