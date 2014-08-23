@@ -1,7 +1,9 @@
-include <../primitive_parts/basic_panels.scad>;
+include <top.scad>;
+
 include <../dimensions.scad>;
 
+// Bottom panel is the same as top with a cutout for the nose
 module BottomPanel()
 {
-	BasicPanelWithSideSlots(main_width, main_depth, material_thickness, top_slot_width, top_slot_spacing);
+	TopPanel();
 }

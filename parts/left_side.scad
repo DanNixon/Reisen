@@ -1,7 +1,9 @@
-include <../primitive_parts/basic_panels.scad>;
+include <right_side.scad>;
+
 include <../dimensions.scad>;
 
+// Left side is just same as right side with a mount for the magent
 module LeftSidePanel()
 {
-	BasicPanelWithEndTabs(main_depth, main_height, top_slot_width, material_thickness, top_slot_spacing);
+	RightSidePanel();
 }

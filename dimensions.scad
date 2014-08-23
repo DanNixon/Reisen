@@ -5,6 +5,9 @@ material_thickness = 3;
 lens_diameter = 24;
 magnet_diameter = 20;
 
+// Distance magnet can travel
+magnet_travel = 12;
+
 // Width of the obile phone used
 device_thichness = 12;
 
@@ -17,6 +20,22 @@ main_height = 75;
 // box assembly
 top_slot_width = 20;
 top_slot_spacing = 20;
+
+// Assembly slots on top and bottom of lens panel
+lens_panel_top_bottom_slot_width = 20;
+lens_panel_top_bottom_slot_spacing = 40;
+
+// Assembly slots of side of lens panel
+lens_panel_side_slot_width = 20;
+
+// Position of lens
+lens_offset_x = 34;
+lens_offset_y = 0;
+
+// Size of nose cutout on lens holder panel
+nose_cutout_base_width = 35;
+nose_cutout_top_width = 20;
+nose_cutout_height = 28;
 
 // Size of the camera cutout on the front of the
 // device panel
