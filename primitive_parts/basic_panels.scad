@@ -22,10 +22,10 @@ module BasicPanelWithSideSlots(w, h, slot_width, slot_height, slot_offset_y, cor
 
 		union()
 		{
-			translate([(w/2), 0])
+			translate([(w+slot_width)/2, 0])
 				SlotPair(slot_width, slot_height, slot_offset_y);
 
-			translate([-(w/2), 0])
+			translate([-(w+slot_width)/2, 0])
 				SlotPair(slot_width, slot_height, slot_offset_y);
 		}
 	}

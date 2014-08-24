@@ -5,6 +5,20 @@ include <../config.scad>;
 
 module RightSidePanel()
 {
+	module HingeCirclePair(dx)
+	{
+		translate([dx, 0])
+		{
+			translate([0, -(main_height/2)+hinge_radius])
+				circle(r=hinge_radius, centre=true);
+			translate([0, (main_height/2)-hinge_radius])
+				circle(r=hinge_radius, centre=true);
+		}
+	}
+
+	function hingeHoleRadius() =
+			sqrt(material_thickness*material_thickness+material_thickness*material_thickness) / 2 + hinge_tolerance;
+
 	difference()
 	{
 		BasicPanelWithEndTabs(main_depth, main_height,
@@ -35,5 +49,23 @@ module RightSidePanel()
 					translate([0, -glasses_cutout_height/2+side_panel_corner_radius])
 						circle(r=side_panel_corner_radius, center=true);
 				}
+	}
+
+	difference()
+	{
+		hull()
+		{
+			HingeCirclePair((main_depth/2)+material_thickness+device_thickness);
+			HingeCirclePair(main_depth/2);
+		}
+
+		translate([(main_depth/2)+material_thickness+device_thickness, 0])
+		{
+			translate([0, -(main_height/2)+hinge_radius])
+				circle(r=hingeHoleRadius(), centre=true);
+
+			translate([0, (main_height/2)-hinge_radius])
+				circle(r=hingeHoleRadius(), centre=true);
+		}
 	}
 }

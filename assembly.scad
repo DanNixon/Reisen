@@ -4,6 +4,7 @@ include <parts/left_side.scad>;
 include <parts/right_side.scad>;
 include <parts/lens_holder.scad>;
 include <parts/screen_divider.scad>;
+include <parts/device_panel.scad>;
 
 include <dimensions.scad>;
 
@@ -33,10 +34,10 @@ translate([0, 0, main_height + material_thickness])
 	Extrude(top_panel_colour)
 		TopPanel();
 
-RotateAndExtrudePanel(dx=-(main_width/2), colour=left_side_panel_colour)
+RotateAndExtrudePanel(dx=-(main_width+material_thickness)/2, colour=left_side_panel_colour)
 	LeftSidePanel();
 
-RotateAndExtrudePanel(dx=(main_width/2), colour=right_side_panel_colour)
+RotateAndExtrudePanel(dx=(main_width+material_thickness)/2, colour=right_side_panel_colour)
 	RightSidePanel();
 
 translate([0, 0, midpoint_z_offset])
@@ -47,3 +48,8 @@ translate([0, 0, midpoint_z_offset])
 translate([0, (main_depth+material_thickness)/4, 0])
 	RotateAndExtrudePanel(colour=screen_divider_colour, thickness=screen_divider_material_thickness)
 		ScreenDividerPanel();
+
+translate([0, (main_depth/2)+material_thickness+device_thickness, midpoint_z_offset])
+	rotate([90, 0, 0])
+		Extrude(device_panel_colour)
+			DevicePanel();

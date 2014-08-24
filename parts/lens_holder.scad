@@ -16,11 +16,11 @@ module LensHolderPanel()
 					lens_panel_top_bottom_slot_spacing);
 
 			// Right hand assembly tab
-			translate([(main_width/2), 0])
+			translate([(main_width+material_thickness)/2, 0])
 				square([material_thickness, lens_panel_side_slot_width], center=true);
 
 			// Left hand assembly tab
-			translate([-(main_width/2), 0])
+			translate([-(main_width+material_thickness)/2, 0])
 				square([material_thickness, lens_panel_side_slot_width], center=true);
 		}
 

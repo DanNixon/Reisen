@@ -10,7 +10,7 @@ magnet_diameter = 20;
 magnet_travel = 12;
 
 // Width of the obile phone used
-device_thichness = 12;
+device_thickness = 12;
 
 // Dimensions of manin box assembly
 main_width = 130;
@@ -64,5 +64,11 @@ lens_screen_divider_tab_offset_y = 15;
 top_bottom_corner_rounding_radius = 3;
 side_panel_corner_radius = 3;
 glasses_cutout_corner_rounding_radius = 5;
+device_front_panel_corner_radius = 1;
 
 head_curve_offset_y = material_thickness / 2;
+
+// Size for front device panel hinges
+hinge_radius = 5;
+hinge_tolerance = 0.25;
+device_snap_latch_len = 1;
