@@ -8,35 +8,37 @@ include <dimensions.scad>;
 
 midpoint_z_offset = (main_height + material_thickness) / 2;
 
-module Extrude()
+module Extrude(colour=[0,0,0,1])
 {
-	linear_extrude(height=material_thickness, center=true)
-		child();
+	color(colour)
+		linear_extrude(height=material_thickness, center=true)
+			child();
 }
 
-module RotateAndExtrudeSidePanel(dx=0)
+module RotateAndExtrudePanel(dx=0, colour=[0,0,0,1])
 {
 	translate([dx, 0, midpoint_z_offset])
 		rotate([0, 90, 0])
 			rotate([0, 0, 90])
-				linear_extrude(height=material_thickness, center=true)
-					child();
+				color(colour)
+					linear_extrude(height=material_thickness, center=true)
+						child();
 }
 
-Extrude()
+Extrude(bottom_panel_colour)
 	BottomPanel();
 
 translate([0, 0, main_height + material_thickness])
-	Extrude()
+	Extrude(top_panel_colour)
 		TopPanel();
 
-RotateAndExtrudeSidePanel(dx=-(main_width/2))
+RotateAndExtrudePanel(dx=-(main_width/2), colour=left_side_panel_colour)
 	LeftSidePanel();
 
-RotateAndExtrudeSidePanel(dx=(main_width/2))
+RotateAndExtrudePanel(dx=(main_width/2), colour=right_side_panel_colour)
 	RightSidePanel();
 
 translate([0, 0, midpoint_z_offset])
 	rotate([90, 0, 0])
-		Extrude()
+		Extrude(lens_holder_panel_colour)
 			LensHolderPanel();
