@@ -41,7 +41,7 @@ nose_cutout_height = 28;
 // Size of the camera cutout on the front of the
 // device panel
 camera_cutout_width = 25;
-camera_cutout_height = 53;
+camera_cutout_height = 30;
 
 // Position of the camera cutout relative to the
 // centre of the device panel
@@ -65,6 +65,7 @@ top_bottom_corner_rounding_radius = 3;
 side_panel_corner_radius = 3;
 glasses_cutout_corner_rounding_radius = 5;
 device_front_panel_corner_radius = 1;
+device_front_panel_cutout_corner_radius = 5;
 
 head_curve_offset_y = material_thickness / 2;
 

@@ -5,12 +5,25 @@ include <../config.scad>;
 
 module DevicePanel()
 {
-	minkowski()
+	difference()
 	{
-		square([main_width-2*device_front_panel_corner_radius,
-				main_height-2*device_front_panel_corner_radius-hinge_radius],
-				center=true);
-		circle(r=device_front_panel_corner_radius);
+		minkowski()
+		{
+			square([main_width-2*device_front_panel_corner_radius,
+					main_height-2*device_front_panel_corner_radius-hinge_radius],
+					center=true);
+			circle(r=device_front_panel_corner_radius);
+		}
+
+		// Cutout for camera
+		translate([camera_cutout_offset_x, camera_cutout_offset_y])
+			minkowski()
+			{
+				square([camera_cutout_width-device_front_panel_cutout_corner_radius,
+						camera_cutout_height-device_front_panel_cutout_corner_radius],
+						center=true);
+				circle(r=device_front_panel_cutout_corner_radius);
+			}
 	}
 
 	// Bottom hinge tabs
