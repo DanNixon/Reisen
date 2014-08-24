@@ -10,3 +10,9 @@ module NoseCurve(w, h, d)
 		circle(r=(w/2), center=true);
 	}
 }
+
+module ellipse(width, height, center=true)
+{
+	scale([1, height/width, 1])
+		circle(r=width/2, center=center);
+}

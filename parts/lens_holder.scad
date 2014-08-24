@@ -2,6 +2,7 @@ include <../primitive_parts/basic_panels.scad>;
 include <../primitive_parts/curves.scad>;
 
 include <../dimensions.scad>;
+include <../config.scad>;
 
 module LensHolderPanel()
 {

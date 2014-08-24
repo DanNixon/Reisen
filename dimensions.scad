@@ -1,5 +1,6 @@
 // Thickness of material used
 material_thickness = 3;
+screen_divider_material_thickness = 1;
 
 // Size of lens and magnet used
 lens_diameter = 24;
@@ -53,6 +54,13 @@ glasses_cutout_offset_y = 5;
 glasses_cutout_width = 35;
 glasses_cutout_height = 40;
 
+// Screen divider assembly tab sizes
+screen_divider_tab_width = 5;
+screen_divider_tab_spacing = 10;
+
 // Corner rounding radii
 top_bottom_corner_rounding_radius = 3;
+side_panel_corner_radius = 3;
 glasses_cutout_corner_rounding_radius = 5;
+
+head_curve_offset_y = material_thickness / 2;

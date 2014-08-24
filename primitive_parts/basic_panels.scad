@@ -12,7 +12,11 @@ module BasicPanelWithSideSlots(w, h, slot_width, slot_height, slot_offset_y, cor
 	{
 		minkowski()
 		{
-			square([(w + 4 * slot_width)-corner_radius, h-corner_radius], center=true);
+			difference()
+			{
+				square([(w + 2 * slot_width)-corner_radius, h-corner_radius], center=true);
+				child();
+			}
 			circle(r=corner_radius);
 		}
 
@@ -35,9 +39,38 @@ module TabPair(tab_width, tab_height, offset_x)
 		square([tab_width, tab_height], center=true);
 }
 
-module BasicPanelWithEndTabs(w, h, tab_width, tab_height, tab_offset_x)
+module BasicPanelWithEndTabs(w, h, tab_width, tab_height, tab_offset_x, corner_radius=0)
 {
-	square([w, h], center=true);
+	module SquareCornerPair(dx)
+	{
+		translate([dx, 0])
+		{
+			translate([0, (-h/2)+corner_radius/2])
+				square([corner_radius, corner_radius], center=true);
+			translate([0, (h/2)-corner_radius/2])
+				square([corner_radius, corner_radius], center=true);
+		}
+	}
+	
+	if(corner_radius == 0)
+	{
+		square([w, h], center=true);
+	}
+	else
+	{
+		minkowski()
+		{
+			difference()
+			{
+				square([w-2*corner_radius, h-2*corner_radius], center=true);
+				child();
+			}
+			circle(r=corner_radius);
+		}
+	}
+
+	SquareCornerPair(dx=(-w/2)+(corner_radius/2));
+	SquareCornerPair(dx=(w/2)-(corner_radius/2));
 
 	translate([0, (h/2)+(tab_height/2)])
 		TabPair(tab_width, tab_height, tab_offset_x);

@@ -1,3 +1,6 @@
+// Resolution must be sufficiently high to actually render properly
+$fn = 100;
+
 // Set to true to allow extra space for glasses
 glasses = true;
 
