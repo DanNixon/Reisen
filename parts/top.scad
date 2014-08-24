@@ -24,7 +24,7 @@ module TopPanel()
 					lens_panel_top_bottom_slot_spacing);
 
 		// Screen divider assembly slots
-		translate([0, ((main_depth/2)+material_thickness)/2])
+		translate([0, (main_depth+material_thickness)/4])
 			SlotPair(screen_divider_material_thickness,
 					screen_divider_tab_width,
 					screen_divider_tab_spacing);

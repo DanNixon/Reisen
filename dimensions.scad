@@ -57,6 +57,8 @@ glasses_cutout_height = 40;
 // Screen divider assembly tab sizes
 screen_divider_tab_width = 5;
 screen_divider_tab_spacing = 10;
+lens_screen_divider_tab_width = 20;
+lens_screen_divider_tab_offset_y = 15;
 
 // Corner rounding radii
 top_bottom_corner_rounding_radius = 3;

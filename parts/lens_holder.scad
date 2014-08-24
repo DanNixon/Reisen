@@ -24,6 +24,10 @@ module LensHolderPanel()
 				square([material_thickness, lens_panel_side_slot_width], center=true);
 		}
 
+		// Screen divider assembly slot
+		translate([0, lens_screen_divider_tab_offset_y])
+			square([screen_divider_material_thickness, lens_screen_divider_tab_width], center=true);
+
 		// Nose cutout
 		translate([0, -(main_height/2)])
 			NoseCurve(nose_cutout_base_width,
