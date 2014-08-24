@@ -14,6 +14,7 @@ module RightSidePanel()
 		// Slot for lens panel
 		square([material_thickness, lens_panel_side_slot_width], center=true);
 
+		// Clearance slot for glasses
 		if(glasses)
 			translate([(-(main_depth/4))+glasses_cutout_offset_x, glasses_cutout_offset_y])
 				square([glasses_cutout_width, glasses_cutout_height], center=true);

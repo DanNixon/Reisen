@@ -8,7 +8,8 @@ module TopPanel()
 	{
 		BasicPanelWithSideSlots(main_width, main_depth,
 				material_thickness,
-				top_slot_width, top_slot_spacing);
+				top_slot_width, top_slot_spacing,
+				top_bottom_corner_rounding_radius);
 
 		rotate(90)
 			SlotPair(material_thickness,

@@ -52,3 +52,7 @@ glasses_cutout_offset_x = -5;
 glasses_cutout_offset_y = 5;
 glasses_cutout_width = 35;
 glasses_cutout_height = 40;
+
+// Corner rounding radii
+top_bottom_corner_rounding_radius = 3;
+glasses_cutout_corner_rounding_radius = 5;

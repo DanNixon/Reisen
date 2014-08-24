@@ -6,11 +6,15 @@ module SlotPair(slot_width, slot_height, offset_y)
 		square([slot_width, slot_height], center=true);
 }
 
-module BasicPanelWithSideSlots(w, h, slot_width, slot_height, slot_offset_y)
+module BasicPanelWithSideSlots(w, h, slot_width, slot_height, slot_offset_y, corner_radius)
 {
 	difference()
 	{
-		square([(w + 4 * slot_width), h], center=true);
+		minkowski()
+		{
+			square([(w + 4 * slot_width)-corner_radius, h-corner_radius], center=true);
+			circle(r=corner_radius);
+		}
 
 		union()
 		{
