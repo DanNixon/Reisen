@@ -13,8 +13,8 @@ output_folder:
 	mkdir -p $(out_dir)
 
 assembly_image_thumb: output_folder
-	openscad assembly.scad --imgsize=200,200 --camera=0,0,30,65,0,330,1000 -o $(out_dir)/assembly_rear_thumb.png
-	openscad assembly.scad --imgsize=200,200 --camera=0,0,30,65,0,140,1000 -o $(out_dir)/assembly_front_thumb.png
+	openscad assembly.scad --imgsize=250,250 --camera=0,0,30,65,0,330,1000 -o $(out_dir)/assembly_rear_thumb.png
+	openscad assembly.scad --imgsize=250,250 --camera=0,0,30,65,0,140,1000 -o $(out_dir)/assembly_front_thumb.png
 
 assembly_image: output_folder
 	openscad assembly.scad $(render_options) --camera=0,0,30,65,0,330,1000 -o $(out_dir)/assembly_rear.png
