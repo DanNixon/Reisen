@@ -19,6 +19,4 @@ Notable differences to the original Cardboard
 To Do
 -----
 
--  Add "select" magnet
--  Add retention clips for lens
 -  Add configurable cutout for USB/audio connectors

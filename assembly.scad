@@ -2,9 +2,11 @@ use <parts/top.scad>;
 use <parts/bottom.scad>;
 use <parts/left_side.scad>;
 use <parts/right_side.scad>;
-use <parts/lens_holder.scad>;
+use <parts/lens_panel.scad>;
 use <parts/screen_divider.scad>;
 use <parts/device_panel.scad>;
+use <parts/lens_clip.scad>;
+use <parts/magnet_guide.scad>;
 
 include <dimensions.scad>;
 include <config.scad>;
@@ -47,7 +49,7 @@ RotateAndExtrudePanel(dx=(main_width+material_thickness)/2, colour=right_side_pa
 translate([0, 0, midpoint_z_offset])
 	rotate([90, 0, 0])
 		Extrude(lens_holder_panel_colour)
-			LensHolderPanel();
+			LensPanel();
 
 translate([0, (main_depth+material_thickness)/4, 0])
 	RotateAndExtrudePanel(colour=screen_divider_colour, thickness=screen_divider_material_thickness)
@@ -57,3 +59,21 @@ translate([0, (main_depth/2)+material_thickness+device_thickness, midpoint_z_off
 	rotate([90, 0, 0])
 		Extrude(device_panel_colour)
 			DevicePanel();
+
+translate([0, magnet_guide_offset_x, magnet_guide_offset_y])
+	RotateAndExtrudePanel(dx=-((main_width+material_thickness)/2)-material_thickness,
+		colour=magnet_guide_colour)
+		MagnetGuide();
+
+module ExtrudedLensClip(dx, dy)
+{
+	translate([dx, dy, midpoint_z_offset])
+		rotate([90, 0, 0])
+			Extrude(lens_clip_colour)
+				LensClip();
+}
+
+ExtrudedLensClip(lens_offset_x, material_thickness);
+ExtrudedLensClip(-lens_offset_x, material_thickness);
+ExtrudedLensClip(lens_offset_x, -material_thickness);
+ExtrudedLensClip(-lens_offset_x, -material_thickness);

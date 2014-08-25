@@ -4,7 +4,7 @@ include <../primitive_parts/curves.scad>;
 include <../dimensions.scad>;
 include <../config.scad>;
 
-module LensHolderPanel()
+module LensPanel()
 {
 	difference()
 	{
@@ -36,15 +36,15 @@ module LensHolderPanel()
 
 		// Right lens
 		translate([lens_offset_x, lens_offset_y])
-			circle(r=(lens_diameter/2));
+			circle(d=lens_diameter);
 
 		// Left lens
 		translate([-lens_offset_x, lens_offset_y])
-			circle(r=(lens_diameter/2));
+			circle(d=lens_diameter);
 	}
 }
 
 res = default_res;
 $fn = res;
 
-LensHolderPanel();
+LensPanel();

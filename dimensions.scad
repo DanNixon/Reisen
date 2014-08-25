@@ -2,12 +2,18 @@
 material_thickness = 3;
 screen_divider_material_thickness = 1;
 
-// Size of lens and magnet used
+// Dimensions related to lens and mount
 lens_diameter = 24;
-magnet_diameter = 20;
+lens_clip_width = 5;
+lens_clip_tab_radius = 2;
+num_lens_tabs = 3;
 
-// Distance magnet can travel
+// Dimensions related to "select" magent
+magnet_diameter = 20;
 magnet_travel = 12;
+magnet_guide_width = 5;
+magnet_guide_offset_x = 30;
+magnet_guide_offset_y = 15;
 
 // Width of the obile phone used
 device_thickness = 12;
