@@ -12,10 +12,11 @@ Notable differences to the original Cardboard
 ---------------------------------------------
 
 -  Optional cutout to allow those that wear glasses to comfortably use it
--  Configurable device width and cutout for camera (improvind device support)
+-  Configurable device width and cutout for camera (improving device support)
+-  Latching front door to hold device in place
 
-TODO
-----
+To Do
+-----
 
 -  Add "select" magnet
 -  Add retention clips for lens
