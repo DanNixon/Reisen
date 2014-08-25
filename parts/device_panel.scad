@@ -38,3 +38,8 @@ module DevicePanel()
 				material_thickness,
 				(main_width+device_snap_latch_len)/2);
 }
+
+res = default_res;
+$fn = res;
+
+DevicePanel();

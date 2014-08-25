@@ -28,3 +28,8 @@ module ScreenDividerPanel()
 					nose_cutout_top_width);
 	}
 }
+
+res = default_res;
+$fn = res;
+
+ScreenDividerPanel();

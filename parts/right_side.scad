@@ -69,3 +69,8 @@ module RightSidePanel()
 		}
 	}
 }
+
+res = default_res;
+$fn = res;
+
+RightSidePanel();

@@ -1,4 +1,4 @@
-include <right_side.scad>;
+use <right_side.scad>;
 
 include <../dimensions.scad>;
 include <../config.scad>;
@@ -8,3 +8,8 @@ module LeftSidePanel()
 {
 	RightSidePanel();
 }
+
+res = default_res;
+$fn = res;
+
+LeftSidePanel();

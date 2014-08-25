@@ -47,3 +47,8 @@ module BottomPanel()
 			circle(r=top_bottom_corner_rounding_radius);
 		}
 }
+
+res = default_res;
+$fn = res;
+
+BottomPanel();

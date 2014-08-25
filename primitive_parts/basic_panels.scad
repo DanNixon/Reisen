@@ -15,7 +15,7 @@ module BasicPanelWithSideSlots(w, h, slot_width, slot_height, slot_offset_y, cor
 			difference()
 			{
 				square([(w + 2 * slot_width)-corner_radius, h-corner_radius], center=true);
-				child();
+				children();
 			}
 			circle(r=corner_radius);
 		}
@@ -63,7 +63,7 @@ module BasicPanelWithEndTabs(w, h, tab_width, tab_height, tab_offset_x, corner_r
 			difference()
 			{
 				square([w-2*corner_radius, h-2*corner_radius], center=true);
-				child();
+				children();
 			}
 			circle(r=corner_radius);
 		}

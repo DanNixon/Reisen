@@ -1,5 +1,5 @@
-// Resolution must be sufficiently high to actually render properly
-$fn = 100;
+// Default preview and image resolution
+default_res = 80;
 
 // Set to true to allow extra space for glasses
 glasses = true;

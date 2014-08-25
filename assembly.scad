@@ -1,20 +1,24 @@
-include <parts/top.scad>;
-include <parts/bottom.scad>;
-include <parts/left_side.scad>;
-include <parts/right_side.scad>;
-include <parts/lens_holder.scad>;
-include <parts/screen_divider.scad>;
-include <parts/device_panel.scad>;
+use <parts/top.scad>;
+use <parts/bottom.scad>;
+use <parts/left_side.scad>;
+use <parts/right_side.scad>;
+use <parts/lens_holder.scad>;
+use <parts/screen_divider.scad>;
+use <parts/device_panel.scad>;
 
 include <dimensions.scad>;
+include <config.scad>;
 
 midpoint_z_offset = (main_height + material_thickness) / 2;
+
+res = default_res;
+$fn = res;
 
 module Extrude(colour=[0,0,0,1])
 {
 	color(colour)
 		linear_extrude(height=material_thickness, center=true)
-			child();
+			children();
 }
 
 module RotateAndExtrudePanel(dx=0, colour=[0,0,0,1], thickness=material_thickness)
@@ -24,7 +28,7 @@ module RotateAndExtrudePanel(dx=0, colour=[0,0,0,1], thickness=material_thicknes
 			rotate([0, 0, 90])
 				color(colour)
 					linear_extrude(height=thickness, center=true)
-						child();
+						children();
 }
 
 Extrude(bottom_panel_colour)

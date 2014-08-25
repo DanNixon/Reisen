@@ -43,3 +43,8 @@ module LensHolderPanel()
 			circle(r=(lens_diameter/2));
 	}
 }
+
+res = default_res;
+$fn = res;
+
+LensHolderPanel();
