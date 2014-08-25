@@ -8,6 +8,12 @@ A Google Cardboard clone designed to be machined from 3mm material (MDF, Plywood
 
 Still somewhat a work in progress.
 
+Notable differences to the original Cardboard
+---------------------------------------------
+
+-  Optional cutout to allow those that wear glasses to comfortably use it
+-  Configurable device width and cutout for camera (improvind device support)
+
 TODO
 ----
 
