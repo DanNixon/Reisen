@@ -1,8 +1,12 @@
 out_dir = ./rendered
+
 dxf_options = -D 'res=800'
 render_options = -D 'res=200' --imgsize=1000,1000
 
-all: all_parts
+camera_front = --camera=0,0,30,65,0,140,1000
+camera_rear = --camera=0,0,30,65,0,330,1000
+
+all: all_parts assembly_image assembly_image_thumb
 
 all_parts: bottom top left_side right_side lens_holder screen_divider device_panel
 
@@ -13,12 +17,12 @@ output_folder:
 	mkdir -p $(out_dir)
 
 assembly_image_thumb: output_folder
-	openscad assembly.scad --imgsize=250,250 --camera=0,0,30,65,0,330,1000 -o $(out_dir)/assembly_rear_thumb.png
-	openscad assembly.scad --imgsize=250,250 --camera=0,0,30,65,0,140,1000 -o $(out_dir)/assembly_front_thumb.png
+	openscad assembly.scad --imgsize=250,250 $(camera_rear) -o $(out_dir)/assembly_rear_thumb.png
+	openscad assembly.scad --imgsize=250,250 $(camera_front) -o $(out_dir)/assembly_front_thumb.png
 
 assembly_image: output_folder
-	openscad assembly.scad $(render_options) --camera=0,0,30,65,0,330,1000 -o $(out_dir)/assembly_rear.png
-	openscad assembly.scad $(render_options) --camera=0,0,30,65,0,140,1000 -o $(out_dir)/assembly_front.png
+	openscad assembly.scad $(render_options) $(camera_rear) -o $(out_dir)/assembly_rear.png
+	openscad assembly.scad $(render_options) $(camera_front) -o $(out_dir)/assembly_front.png
 
 bottom: output_folder
 	openscad parts/bottom.scad $(dxf_options) -o $(out_dir)/bottom.dxf
