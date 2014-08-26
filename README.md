@@ -15,8 +15,4 @@ Notable differences to the original Cardboard
 -  Configurable device width and cutout for camera (improving device support)
 -  Latching front door to hold device in place
 -  Ability to use a thinner material for the screen divider
-
-To Do
------
-
--  Add configurable cutout for USB/audio connectors
+-  Configurable cutout for USB/audio connectors
