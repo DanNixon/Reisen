@@ -1,6 +1,5 @@
 include <../primitive_parts/basic_panels.scad>;
 
-include <../dimensions.scad>;
 include <../config.scad>;
 
 module DevicePanel()

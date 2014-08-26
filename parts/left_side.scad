@@ -1,12 +1,12 @@
-use <right_side.scad>;
+include <../primitive_parts/side_panel.scad>;
 
-include <../dimensions.scad>;
 include <../config.scad>;
 
-// Left side is just same as right side with a mount for the magent
 module LeftSidePanel()
 {
-	RightSidePanel();
+	SidePanel()
+		if(cable_cutout_side == LEFT)
+			CableHole();
 }
 
 res = default_res;

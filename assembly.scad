@@ -8,7 +8,6 @@ use <parts/device_panel.scad>;
 use <parts/lens_clip.scad>;
 use <parts/magnet_guide.scad>;
 
-include <dimensions.scad>;
 include <config.scad>;
 
 midpoint_z_offset = (main_height + material_thickness) / 2;

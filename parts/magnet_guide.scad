@@ -1,4 +1,3 @@
-include <../dimensions.scad>;
 include <../config.scad>;
 
 module MagnetGuide()
