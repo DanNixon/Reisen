@@ -21,7 +21,7 @@ lens_clip_colour 					= [0.4, 0.5, 0.5];
 
 // Thickness of material used
 material_thickness = 3;
-screen_divider_material_thickness = 1;
+screen_divider_material_thickness = 3;
 
 // Dimensions related to lens and mount
 lens_diameter = 24;
@@ -40,7 +40,7 @@ magnet_guide_offset_y = 15;
 device_thickness = 12;
 
 // Dimensions of manin box assembly
-main_width = 130;
+main_width = 138; 	// Ensure this is greater then the height fo your device
 main_depth = 80;
 main_height = 75;
 
