@@ -23,6 +23,9 @@ lens_clip_colour 					= [0.4, 0.5, 0.5];
 material_thickness = 3;
 screen_divider_material_thickness = 3;
 
+// Additional spacing to each edge of slot
+slot_tolerance = 0.1;
+
 // Dimensions related to lens and mount
 lens_diameter = 24;
 lens_clip_width = 5;

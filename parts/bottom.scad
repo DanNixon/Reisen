@@ -37,7 +37,7 @@ module BottomPanel()
 					screen_divider_tab_width,
 					screen_divider_tab_spacing);
 	}
-	
+
 	// Extend the bottom a little to support the device
 	translate([0, (main_depth+device_thickness)/2])
 		minkowski()

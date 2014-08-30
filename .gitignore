@@ -1,2 +1,7 @@
-# Generated DXFs
+# Generated files
 *.dxf
+*.png
+
+# Not the thumbnail images used on the readme
+!rendered/assembly_front_thumb.png
+!rendered/assembly_rear_thumb.png

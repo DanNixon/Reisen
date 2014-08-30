@@ -25,7 +25,11 @@ module LensPanel()
 
 		// Screen divider assembly slot
 		translate([0, lens_screen_divider_tab_offset_y])
-			square([screen_divider_material_thickness, lens_screen_divider_tab_width], center=true);
+			minkowski()
+			{
+				square([screen_divider_material_thickness, lens_screen_divider_tab_width], center=true);
+				circle(r=slot_tolerance);
+			}
 
 		// Nose cutout
 		translate([0, -(main_height/2)])

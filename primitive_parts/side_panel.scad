@@ -37,7 +37,11 @@ module SidePanel()
 		}
 
 		// Slot for lens panel
-		square([material_thickness, lens_panel_side_slot_width], center=true);
+		minkowski()
+		{
+			square([material_thickness, lens_panel_side_slot_width], center=true);
+			circle(r=slot_tolerance);
+		}
 
 		// Rounded corners for inside of cutout
 		if(glasses)
