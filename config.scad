@@ -27,7 +27,7 @@ screen_divider_material_thickness = 3;
 slot_tolerance = 0.1;
 
 // Dimensions related to lens and mount
-lens_diameter = 24;
+lens_diameter = 27.5;
 lens_clip_width = 5;
 lens_clip_tab_radius = 2;
 num_lens_tabs = 3;
