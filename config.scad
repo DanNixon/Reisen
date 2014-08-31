@@ -33,11 +33,12 @@ lens_clip_tab_radius = 2;
 num_lens_tabs = 3;
 
 // Dimensions related to "select" magent
-magnet_diameter = 20;
+magnet_diameter = 22;
 magnet_travel = 12;
 magnet_guide_width = 5;
 magnet_guide_offset_x = 30;
 magnet_guide_offset_y = 15;
+magnet_finger_hole = 18;
 
 // Width of the obile phone used
 device_thickness = 12;

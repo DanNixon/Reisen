@@ -8,7 +8,7 @@ camera_rear = --camera=0,0,30,65,0,330,1000
 
 all: all_parts assembly_image assembly_image_thumb
 
-all_parts: bottom top left_side right_side lens_panel screen_divider device_panel lens_clip magnet_guide
+all_parts: bottom top left_side right_side lens_panel screen_divider device_panel lens_clip magnet_guide magnet_guide_top
 
 clean:
 	rm -rf $(out_dir)
@@ -50,3 +50,6 @@ lens_clip: output_folder
 
 magnet_guide: output_folder
 	openscad parts/magnet_guide.scad $(dxf_options) -o $(out_dir)/magnet_guide.dxf
+
+magnet_guide_top: output_folder
+	openscad parts/magnet_guide_top.scad $(dxf_options) -o $(out_dir)/magnet_guide_top.dxf
