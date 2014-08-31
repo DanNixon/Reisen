@@ -7,6 +7,7 @@ use <parts/screen_divider.scad>;
 use <parts/device_panel.scad>;
 use <parts/lens_clip.scad>;
 use <parts/magnet_guide.scad>;
+use <parts/magnet_guide_top.scad>;
 
 include <config.scad>;
 
@@ -60,9 +61,16 @@ translate([0, (main_depth/2)+material_thickness+device_thickness, midpoint_z_off
 			DevicePanel();
 
 translate([0, magnet_guide_offset_x, magnet_guide_offset_y])
+{
 	RotateAndExtrudePanel(dx=-((main_width+material_thickness)/2)-material_thickness,
-		colour=magnet_guide_colour)
+			colour=magnet_guide_colour)
 		MagnetGuide();
+
+	translate([-material_thickness, 0, 0])
+		RotateAndExtrudePanel(dx=-((main_width+material_thickness)/2)-material_thickness,
+				colour=magnet_guide_top_colour)
+			MagnetGuideTop();
+}
 
 module ExtrudedLensClip(dx, dy)
 {

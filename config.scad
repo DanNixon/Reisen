@@ -17,6 +17,7 @@ lens_holder_panel_colour 	= [0.8, 0.3, 0.4];
 screen_divider_colour 		= [0.5, 0.5, 0.5];
 device_panel_colour 			= [0.2, 0.8, 0.4];
 magnet_guide_colour 			= [0.8, 0.4, 0.6];
+magnet_guide_top_colour 	= [0.8, 0.4, 1.0];
 lens_clip_colour 					= [0.4, 0.5, 0.5];
 
 // Thickness of material used
