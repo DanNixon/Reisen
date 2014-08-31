@@ -111,3 +111,9 @@ cable_cutout_height = 35;
 cable_cutout_offset_x = 2;
 cable_cutout_offset_y = 8;
 cable_cutout_corner_radius = 2;
+
+// Head strap mounting holes
+head_strap_hole_radius = 2;
+head_strap_hole_spacing = 65;
+head_strap_hole_offset_x = 0;
+head_strap_hole_offset_y = 0;

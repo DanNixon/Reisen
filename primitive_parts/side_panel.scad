@@ -43,6 +43,17 @@ module SidePanel()
 			circle(r=slot_tolerance);
 		}
 
+		// Head strap holes
+		translate([-(main_depth/2 - 2*head_strap_hole_radius + head_strap_hole_offset_x),
+				head_strap_hole_offset_y])
+		{
+			translate([0, head_strap_hole_spacing/2])
+				circle(r=head_strap_hole_radius, center=true);
+
+			translate([0, -head_strap_hole_spacing/2])
+				circle(r=head_strap_hole_radius, center=true);
+		}
+
 		// Rounded corners for inside of cutout
 		if(glasses)
 			translate([(-(main_depth/4))+glasses_cutout_offset_x-side_panel_corner_radius+glasses_cutout_width/2, glasses_cutout_offset_y])
