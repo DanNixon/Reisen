@@ -1,3 +1,5 @@
+// Default values should be good for a Galaxy Nexus for someone who wears glasses
+
 // A couple of useful constants
 LEFT = 1;
 RIGHT = 2;
@@ -42,7 +44,7 @@ magnet_guide_offset_y = 15;
 magnet_finger_hole = 18;
 
 // Width of the obile phone used
-device_thickness = 12;
+device_thickness = 10;
 
 // Dimensions of manin box assembly
 main_width = 138; 	// Ensure this is greater then the height fo your device

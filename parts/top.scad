@@ -29,6 +29,14 @@ module TopPanel()
 					screen_divider_tab_width,
 					screen_divider_tab_spacing);
 	}
+
+	// Extend the bottom a little to support the device
+	translate([0, (main_depth+device_thickness)/2])
+		minkowski()
+		{
+			square([main_width+material_thickness, device_thickness], center=true);
+			circle(r=top_bottom_corner_rounding_radius);
+		}
 }
 
 res = default_res;
