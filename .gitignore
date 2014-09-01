@@ -1,6 +1,6 @@
 # Generated files
-*.dxf
-*.png
+rendered/*.dxf
+rendered/*.png
 
 # Not the thumbnail images used on the readme
 !rendered/assembly_front_thumb.png
