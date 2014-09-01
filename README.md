@@ -10,8 +10,9 @@ Notable differences to the original Cardboard
 ---------------------------------------------
 
 -  Optional cutout to allow those that wear glasses to comfortably use it
--  Configurable device width and cutout for camera (improving device support)
+-  Configurable device thickness and cutout for camera (improving device support)
 -  Latching front door to hold device in place
 -  Ability to use a thinner material for the screen divider
 -  Configurable cutout for USB/audio connectors
 -  Configurable mounting holes for a head strap
+-  Ability to mount select magnet in best position (my Galaxy Nexus almost never worked in the official Cardboard)
