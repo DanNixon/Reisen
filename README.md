@@ -16,3 +16,4 @@ Notable differences to the original Cardboard
 -  Configurable cutout for USB/audio connectors
 -  Configurable mounting holes for a head strap
 -  Ability to mount select magnet in best position (my Galaxy Nexus almost never worked in the official Cardboard)
+-  Easy modification of lens type and focal length
