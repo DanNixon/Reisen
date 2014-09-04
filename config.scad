@@ -47,12 +47,11 @@ magnet_finger_hole = 18;
 device_thickness = 10;
 
 // Dimensions of manin box assembly
-main_width = 138; 	// Ensure this is greater then the height fo your device
+main_width = 138; 	// Ensure this is greater then the height of your device
 main_depth = 80;
 main_height = 75;
 
-// Size and position of slots used on main
-// box assembly
+// Size and position of slots used on main box assembly
 top_slot_width = 20;
 top_slot_spacing = 20;
 
@@ -64,7 +63,7 @@ lens_panel_top_bottom_slot_spacing = 40;
 lens_panel_side_slot_width = 20;
 
 // Position of lens
-lens_offset_x = 34;
+lens_offset_x = 38;
 lens_offset_y = 0;
 
 // Size of nose cutout on lens holder panel
@@ -72,8 +71,7 @@ nose_cutout_base_width = 35;
 nose_cutout_top_width = 20;
 nose_cutout_height = 28;
 
-// Size of the camera cutout on the front of the
-// device panel
+// Size of the camera cutout on the front of the device panel
 camera_cutout_width = 25;
 camera_cutout_height = 30;
 
@@ -106,13 +104,13 @@ head_curve_offset_y = material_thickness / 2;
 // Size for front device panel hinges
 hinge_radius = 5;
 hinge_tolerance = 0.25;
-device_snap_latch_len = 1;
+device_snap_latch_len = 0.75;
 
 // Size and position of cable cutout
 cable_cutout_side = RIGHT;
-cable_cutout_width = 8;
+cable_cutout_width = 10;
 cable_cutout_height = 35;
-cable_cutout_offset_x = 2;
+cable_cutout_offset_x = 1;
 cable_cutout_offset_y = 8;
 cable_cutout_corner_radius = 2;
 
